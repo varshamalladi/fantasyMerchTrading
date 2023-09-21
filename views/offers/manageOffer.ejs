@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs')%>
+    <main>
+        <div class="common">
+            <h3>Manage your offer</h3>
+            <div>
+                <table class="profiletable">
+                    <tr class="abc">
+                        <td class="abc">
+                            <div class="column">
+                            <a href="/trades/<%= offer.tradingItem.id %>" class="bodyLink"><%= offer.tradingItem.name %></a>
+                            <img src="<%=offer.tradingItem.imageurl %>" alt="Item Image" style="width:100px; height:100px;">
+                        </div>
+                        </td>
+                        <td class="abc">
+                            <div class="column">
+                            <a href="/trades/<%= offer.receivingItem.id %>" class="bodyLink"><%= offer.receivingItem.name %></a>
+                            <img src="<%=offer.receivingItem.imageurl %>" alt="Item Image" style="width:100px; height:100px;">
+                        </div>
+                        </td>
+                        <td class="abc">
+                            <div id="pbtn">
+                                <form>
+                                    <%if(tradeFlag === "offerer"){%>
+                                    <button class="pbutton" type="submit" formmethod="POST" formaction="/offers/<%= offer.id%>?_method=DELETE" >Cancel Offer</button>
+                                    <%} else if(tradeFlag === "receiver") {%>
+                                        <button class="pbutton" type="submit" formmethod="POST" formaction="/offers/<%= offer.id%>/accept?_method=DELETE" >Accept</button>
+                                        <button class="pbutton" type="submit" formmethod="POST" formaction="/offers/<%= offer.id%>/reject?_method=DELETE" >Reject</button>
+                                    <%}%>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fantasy Merch</title>
+        <link rel="stylesheet" type="text/css" href="/css/common.css">
+        <link href="/css/<%=css%>" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+            <div class="heading">
+                <header>
+                    <a href="/"><img id="logo" src="/images/logo.png" alt="logo"></a>
+                    <div class="usernav"><nav>
+                        <ul>
+                            <li class="menu"><a href="/trades/new">New Merch</a></li>
+                            <%if(!user) {%>
+                                <li class="menu"><a href="/users/login">Login</a></li>
+                                <li class="menu"><a href="/users/new">Sign Up</a></li>
+                            <%} else {%>
+                                <li class="menu"><a href="/users/profile">Profile</a></li>
+                                <li class="menu"><a href="/users/logout">Log Out</a></li>
+                            <%}%>
+                        </ul>
+                    </nav></div>
+                </header>
+
+                <div class="sitenav">
+                    <nav>
+                        <ul>
+                            <li class="menu"><a href="/trades">Merch Categories</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <% if(errorMessages.length > 0) {%>
+                <% errorMessages.forEach(message=>{%>
+                    <div class='error'>
+                        <%=message%>
+                    </div>
+                    <%});%>
+                        <%}%>
+            
+                            <% if(successMessages.length > 0) {%>
+            
+                                <% successMessages.forEach(message=>{%>
+                                    <div class='success'>
+                                        <%=message%>
+                                    </div>
+                                    <%});%>
+                                        <%}%>

@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs')%>
+    <main>
+        <div class="common">
+            <h3>Select one of your items to trade in exchange</h3>
+            <form action="/offers/<%= rId%>" method="POST">
+            <div>
+                <table class="profiletable">
+
+                    <tr>
+                        <th class="abc"></th>
+                        <th class="abc">Item Name</th>
+                        <th class="abc">Item Category</th>
+                        <th class="abc">Item Status</th>
+                    </tr>
+                <%items.forEach(item => {%>
+                    <tr class="abc">
+                        <td class="abc">
+                            <input type="radio" name="tId" value="<%= item._id%>"></button>
+                        </td>
+                        <td class="abc"><a href="/trades/<%= item.id %>" class="bodyLink">
+                             <%= item.name %>
+                            </a></td>
+                        <td class="abc">
+                            <%= item.category %>
+                        </td>
+                        <td class="abc">
+                            <%= item.status %>
+                        </td>
+                    </tr>
+                <%}); %>
+                </table>
+            </div>
+            <div id="pbtn">
+                    <button class="button" index="trade" type="submit">Trade</button>
+            </div>
+            </form>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>

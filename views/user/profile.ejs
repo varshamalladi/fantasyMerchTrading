@@ -1,0 +1,98 @@
+<%- include('../partials/header.ejs')%>
+            <main>
+                <div class="common">
+                    <h3>Welcome <%= user.firstName + " " + user.lastName%></h3>
+                    <div class="row">
+                    <%if(items.length) {%>
+                        <p class="p1">You have created the following items</p>
+                        <table class="profiletable">
+
+                            <tr>
+                                <th class="abc">Item Name</th>
+                                <th class="abc">Item Category</th>
+                                <th class="abc">Item Condition</th>
+                                <th class="abc">Item Status</th>
+                                <th></th>
+                            </tr>
+                        <%items.forEach(item => {%>
+                            <tr class="abc">
+                                <td class="abc"><a href="/trades/<%= item.id %>" class="bodyLink">
+                                     <%= item.name %>
+                                    </a></td>
+                                <td class="abc">
+                                    <%= item.category %>
+                                </td>
+                                <td class="abc">
+                                    <%= item.condition %>
+                                </td>
+                                <td class="abc">
+                                    <%= item.status %>
+                                </td>
+                                <td class="abc">
+                                    <div id="pbtn">
+                                    <form>
+                                        <%if(item.status !== "Traded"){%>
+                                        <button class="pbutton" type="submit" formmethod="GET" formaction="/trades/<%= item.id%>/edit">Update</button>
+                                        <button class="pbutton" type="submit" formmethod="POST" formaction="/trades/<%= item.id%>?_method=DELETE">Delete</button>
+                                        <%}%>
+                                        <% if(item.status === "Trade Pending"){%>
+                                        <button class="pbutton" type="submit" formmethod="GET" formaction="/offers/manageOffer/<%= item.id%>">Manage Offer</button>
+                                        <%}%>
+                                    </form>
+                                </div>
+                                </td>
+                            </tr>
+                        <%}); %>
+                        </table>
+                    <%} else {%>
+                        <p> You don't have any trade items</p>
+                    <%}%>
+                    </div>
+                    <div class="row">
+                        <%if(watchedItems.length) {%>
+                            <p class="p1">You are watching the following items</p>
+                            <table class="profiletable">
+    
+                                <tr>
+                                    <th class="abc">Item Name</th>
+                                    <th class="abc">Item Category</th>
+                                    <th class="abc">Item Condition</th>
+                                    <th class="abc">Item Status</th>
+                                    <th></th>
+                                </tr>
+                            <%watchedItems.forEach(item => {%>
+                                <tr class="abc">
+                                    <td class="abc"><a href="/trades/<%= item.id %>" class="bodyLink">
+                                         <%= item.name %>
+                                        </a></td>
+                                    <td class="abc">
+                                        <%= item.category %>
+                                    </td>
+                                    <td class="abc">
+                                        <%= item.condition %>
+                                    </td>
+                                    <td class="abc">
+                                        <%= item.status %>
+                                    </td>
+                                    <td class="abc">
+                                        <div id="pbtn">
+                                        <form action="/offers/<%= item.id%>?_method=PUT" method="POST">
+                                            <input type="hidden" name="watchedBy" value="false">
+                                            <button class="pbutton" type="submit" >Unwatch</button>
+                                        </form>
+                                    </div>
+                                    </td>
+                                </tr>
+                            <%}); %>
+                            </table>
+                        <%} else {%>
+                            <p> You are not watching any items</p>
+                        <%}%>
+                    </div>
+                    <div class="row">
+                        <%- include('../offers/listOffers.ejs') %>
+                    </div>
+                </div>
+                
+            </main>
+            <%- include('../partials/footer.ejs')%>

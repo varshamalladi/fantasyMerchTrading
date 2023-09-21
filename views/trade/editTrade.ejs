@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs')%>
+            <main>
+                <div>
+                    <div class="formHeading">
+                    <h2>Edit item</h2>
+                </div>
+                    <div class="tradeform">
+                    <form action="/trades/<%= item.id%>?_method=PUT" method="POST">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" value="<%= item.name%>" required>
+                        </div>
+                        <div>
+                            <label for="category">Category:</label>
+                            <input type="text" id="category" name="category" value="<%= item.category%>" required>
+                        </div>
+                        <div>
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" rows="5" cols="50" required minlength="10"><%= item.description%></textarea>
+                        </div>
+                        <div>
+                            <label for="imageurl" >Image link:</label>
+                            <input type="text" id="imageurl" name="imageurl" value="<%= item.imageurl%>" >
+                        </div>
+                        <div>
+                            <label for="condition">Condition:</label>
+                            <select id="condition" name="condition" required>
+                                <%conditions.forEach(condition => {%>
+                                    <option value="<%= condition%>"><%= condition%></option>
+                                <%})%>
+                            </select>
+                        </div>
+                        <!-- <div>
+                            <label for="tradedBy">Name of Trader:</label>
+                            <input type="text" id="tradedBy" name="tradedBy" value="<%= item.tradedBy%>" required>
+                        </div> -->
+                        <button type="submit" id="createMerch">Submit</button>
+                    </form> 
+                    </div>
+                    <p id="submitdesc">Please enter all the details and click on submit button. This will update your item in our list and redirect to trades page.</p>
+                </div>
+            </main>
+            <%- include('../partials/footer.ejs')%>

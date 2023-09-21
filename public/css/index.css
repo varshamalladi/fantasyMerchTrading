@@ -1,0 +1,80 @@
+@charset "UTF-80";
+
+#intro2{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 50px;
+}
+
+.common{
+    text-align: center;
+    padding:30px;
+    height: 72vh;
+}
+
+.bodyLink{
+    color: #323232;
+}
+
+.p1{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.profiletable {
+    border-spacing: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border: 3px solid #323232;
+    border-collapse: collapse;
+    width: 55%;
+}
+
+th.abc,
+td.abc {
+    padding: 8px;
+    text-align: center;
+    border: 3px solid #323232;
+}
+
+#pbtn{
+    text-align: center;
+    /* margin-top: 50px; */
+}
+
+.pbutton {
+    background-color: #323232; 
+    border: none;
+    border-radius: 30px;
+    color: #DDD0C8;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.row{
+    margin-bottom: 40px;
+}
+
+#trade{
+    background-color: #323232; 
+    border: none;
+    border-radius: 30px;
+    color: #DDD0C8;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 10px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }

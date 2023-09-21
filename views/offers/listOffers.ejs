@@ -1,0 +1,41 @@
+<%if(offers.length) {%>
+    <p class="p1">Your Offers</p>
+    <table class="profiletable">
+
+        <tr>
+            <th class="abc">Item Name</th>
+            <th class="abc">Item Category</th>
+            <th class="abc">Item Condition</th>
+            <th class="abc">Item Status</th>
+            <th></th>
+        </tr>
+    <%offers.forEach(offer => {
+        const item = offer.receivingItem;%>
+        <tr class="abc">
+            <td class="abc"><a href="/trades/<%= item.id %>" class="bodyLink">
+                 <%= item.name %>
+                </a></td>
+            <td class="abc">
+                <%= item.category %>
+            </td>
+            <td class="abc">
+                <%= item.condition %>
+            </td>
+            <td class="abc">
+                <%= item.status %>
+            </td>
+            <td class="abc">
+                <div id="pbtn">
+                <!-- <form action="/trades/<%= item.id%>?_method=PUT" method="POST"> -->
+                <form>
+                    <!-- <input type="hidden" name="watchedBy" value="false"> -->
+                    <button class="pbutton" type="submit" formmethod="POST" formaction="/offers/<%= offer.id%>?_method=DELETE" >Cancel Offer</button>
+                </form>
+            </div>
+            </td>
+        </tr>
+    <%}); %>
+    </table>
+<%} else {%>
+    <p> You haven't made any offers</p>
+<%}%>

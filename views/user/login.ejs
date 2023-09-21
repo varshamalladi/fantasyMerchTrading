@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs')%>
+<main>
+    <div>
+        <div class="formHeading">
+        <p id="intro">Welcome to Fantasy Merch</p>
+        <p id="intro">Enter the below details to Login</p>
+        </div>
+        <div class="tradeform">
+            <form action="/users/login" method="POST">
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class = "fixed-width" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class = "fixed-width" minlength="8" maxlength="64" required>
+                </div>
+                <button type="submit" id="createMerch">Login</button>
+            </form> 
+        </div>
+        <!-- <p id="submitdesc">Please enter all the details and click on submit button. This will add your item to our list and redirect to trades page.</p> -->
+    </div>
+</main>
+    <%- include('../partials/footer.ejs')%>

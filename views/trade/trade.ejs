@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs')%>
+            <main>
+                <div class="row">
+                    <div class="column">
+                        <div class="container">
+                            <h3><b><%= item.name%></b></h3>
+                            <img src="<%=item.imageurl %>" alt="Item Image" style="width:200px; height:200px;">
+                            <div>
+                                <h4><b>Category: <%= item.category%></b></h4> 
+                                <p class="details"><b>Status:</b> <%= item.status%></p>
+                                <p class="details"><b>Traded By:</b> <%= item.tradedBy.firstName + ' ' + item.tradedBy.lastName%></p>
+                                <p class="details"><b>Condition:</b> <%= item.condition%></p>
+                                <p class="details"><b>History: </b><%= item.description%></p> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="column">
+                        <%if(user == item.tradedBy._id) {%>
+                            <div id="btn">
+                            <form id="itemform">
+                                <%if(item.status !== "Traded"){%>
+                                <button class="button" type="submit" formmethod="GET" formaction="/trades/<%= item.id%>/edit">Update</button>
+                                <button class="button" type="submit" formmethod="POST" formaction="/trades/<%= item.id%>?_method=DELETE">Delete</button>
+                                <%}%>
+                            </form>
+                            </div>
+                            <%} else {%>
+                        <div id="btn">
+                            <%if(item.status !== "Traded"){%>
+                            <form action="/offers/new/<%= item.id%>" method="GET" id="itemform">
+                                <button class="button" type="submit">Trade</button>
+                            </form>
+                              
+                            <form action="/offers/<%= item.id%>?_method=PUT" method="POST" id="itemform">
+                                <input type="hidden" name="watchedBy" value="<%= watch%>">
+                                <button class="button" type="submit" ><%= (watch) ? "Watch" : "Unwatch" %> </button>
+                            </form>
+                            <%}%>
+                        </div>
+                        <%}%>
+                    </div>
+                    
+                </div>
+            
+            </main>
+            <%- include('../partials/footer.ejs')%>

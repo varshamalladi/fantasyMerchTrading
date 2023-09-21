@@ -1,0 +1,72 @@
+@charset "UTF-80";
+
+h2{
+    text-align: center;
+}
+
+.tradeform input, select{
+    margin: 10px 10px;
+    width: 200px;
+    background-color: #DDD0C8;
+    font-size: medium; 
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: left;
+}
+
+.tradeform textarea{
+    margin: 10px 10px;
+    width: 200px;
+    vertical-align: top;
+    background-color: #DDD0C8;
+    font-size: medium; 
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: left;
+}
+
+.tradeform label{
+    margin: 10px 10px;
+    width: 150px;
+    font-family: sans-serif;
+    display: inline-block;
+    text-align: left;
+}
+
+#submitdesc{
+    text-align: center;
+}
+
+#createMerch{
+    background-color: #323232; 
+    border: none;
+    border-radius: 30px;
+    color: #DDD0C8;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 10px;
+}
+
+.tradeform{
+    border-radius: 5px;
+    background-color: #DDD0C8;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.formHeading{
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+#intro{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 10px;
+}

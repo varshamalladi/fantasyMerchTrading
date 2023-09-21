@@ -1,0 +1,40 @@
+<%- include('../partials/header.ejs')%>
+            <main>
+                <div>
+                    <div class="formHeading">
+                    <h2>Create a new item to trade</h2>
+                    </div>
+                    <div class="tradeform">
+                    <form action="/trades" method="POST">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="category">Category:</label>
+                            <input type="text" id="category" name="category" required>
+                        </div>
+                        <div>
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" rows="5" cols="50" required minlength="10"></textarea>
+                        </div>
+                        <div>
+                            <label for="imageurl" >Image link:</label>
+                            <input type="text" id="imageurl" name="imageurl"
+                                pattern="(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-/]))?" required>
+                        </div>
+                        <div>
+                            <label for="condition">Condition:</label>
+                            <select id="condition" name="condition" required>
+                                <%conditions.forEach(condition => {%>
+                                    <option value="<%= condition%>"><%= condition%></option>
+                                <%})%>
+                            </select>
+                        </div>
+                        <button type="submit" id="createMerch">Create merch</button>
+                    </form> 
+                    </div>
+                    <p id="submitdesc">Please enter all the details and click on submit button. This will add your item to our list and redirect to trades page.</p>
+                </div>
+            </main>
+            <%- include('../partials/footer.ejs')%>

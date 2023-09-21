@@ -1,0 +1,102 @@
+[{
+  "_id": {
+    "$oid": "642b14d203a2698c186d4e10"
+  },
+  "name": "Captain America Shield",
+  "category": "Avengers",
+  "description": "Captain America's only weapon was his shield, a concave disk 2.5 feet in diameter, weighing 12 pounds. It is made of a unique Vibranium-metal alloy that has never been duplicated. The shield was cast by American metallurgist Dr. Myron MacLain, who was contracted by the U.S. government to create an impenetrable substance to use for tanks during World War II. MacLain was never able to duplicate the process due to his inability to identify a still unknown factor that played a role in it. The shield was awarded to Captain America by the government several months after the beginning of his career.",
+  "imageurl": "/images/capShield.jpeg",
+  "tradedBy": {
+    "$oid": "64489559a941dbef9a6eac5f"
+  },
+  "condition": "Good",
+  "status": "Available",
+  "updatedAt": {
+    "$date": "2023-05-12T02:17:38.352Z"
+  },
+  "watchedBy": []
+},{
+  "_id": {
+    "$oid": "642b14db03a2698c186d4e11"
+  },
+  "name": "Thanos Gauntlet",
+  "category": "Avengers",
+  "description": "The Infinity Gauntlet is one of the most powerful objects in the Universe. It was designed to hold six of the soul gems, better known as the Infinity Gems. When used in combination their already impressive powers make the wearer able to do anything they want. It was gathered by the Mad Titan Thanos as he took the gems from the Elders of the Universe that had originally carried them. He hoped to appease his love to the entity known as Death, Thanos used the Infinity Gauntlet with all of the Infinity Gems to remove half of the population of the Universe.",
+  "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHNRJnXLmikpOnmNtiquz3RoYa5BE6QxniXQ&usqp=CAU",
+  "tradedBy": {
+    "$oid": "64489559a941dbef9a6eac5f"
+  },
+  "condition": "moderate",
+  "updatedAt": {
+    "$date": "2023-05-12T02:15:45.319Z"
+  },
+  "status": "Available",
+  "watchedBy": []
+},{
+  "_id": {
+    "$oid": "642b14db03a2698c186d4e12"
+  },
+  "name": "Thors Hammer",
+  "category": "Avengers",
+  "description": "Mjölnir (from Old Norse Mjǫllnir) is the hammer of the thunder god Thor in Norse mythology, used both as a devastating weapon and as a divine instrument to provide blessings. The hammer is attested in numerous sources, including the 11th century runic Kvinneby amulet, the Poetic Edda, a collection of eddic poetry compiled in the 13th century, and the Prose Edda, a collection of prose and poetry compiled in the 13th century. The hammer was commonly worn as a pendant during the Viking Age in the Scandinavian cultural sphere, and Thor and his hammer occur depicted on a variety of objects from the archaeological record. Today the symbol appears in a wide variety of media and is again worn as a pendant by various groups, including adherents of modern Heathenry.",
+  "imageurl": "https://c8.alamy.com/comp/RBBM18/hammer-of-thor-isolated-RBBM18.jpg",
+  "tradedBy": {
+    "$oid": "64489559a941dbef9a6eac5f"
+  },
+  "condition": "excellent",
+  "updatedAt": {
+    "$date": "2023-05-09T18:52:29.201Z"
+  },
+  "status": "Available",
+  "watchedBy": []
+},{
+  "_id": {
+    "$oid": "642b14eb03a2698c186d4e13"
+  },
+  "name": "Harry Potters Wand",
+  "category": "Harry Potter",
+  "description": "A wand was a quasi-sentient magical instrument through which a witch or wizard channelled their magical powers to centralise the effects for more complex results.[3] Most spells were cast with the aid of wands, but spells could be cast without the use of wands. Although wandless magic was more common in other countries, such as some in Africa, European wizards were generally used to using the tool and found wandless magic more difficult, requiring much more concentration and skill to perform these spells.",
+  "imageurl": "https://t3.ftcdn.net/jpg/04/47/74/98/360_F_447749881_PP2ciirltggGWJ1n7Qhpk3Sfq88Su1WN.jpg",
+  "tradedBy": {
+    "$oid": "6448970d8b5b0ef130dcef39"
+  },
+  "condition": "excellent",
+  "updatedAt": {
+    "$date": "2023-05-12T02:17:38.352Z"
+  },
+  "status": "Available",
+  "watchedBy": []
+},{
+  "_id": {
+    "$oid": "642b14eb03a2698c186d4e14"
+  },
+  "name": "Harry Potters Broom",
+  "category": "Harry Potter",
+  "description": "Broomsticks, also known as brooms, were one of the means employed by wizards and witches to transport themselves between locations. Wizarding broomsticks, unlike non-magical brooms, were enchanted to fly, allowing for a witch or wizard to travel to their destination through the air, as well as for playing broom games such as Quidditch.[1] Their use in Great Britain and Ireland was regulated by the Ministry of Magic&amp;#x27;s Broom Regulatory Control.[2]\r\n\r\nThe earliest recorded use of the broomstick was in 962 in a German illustrated manuscript.[1] Only wizards and witches appeared to use broomsticks in the wizarding world. House-elves, for example, Apparate. Broomsticks appeared to have a bit of a personality of their own, as they were able to respond to the simplest of commands, such as &amp;quot;Up!&amp;quot;.",
+  "imageurl": "https://content.time.com/time/photoessays/2009/dubious_dolls/dubious_dolls_9.jpg",
+  "tradedBy": {
+    "$oid": "6448970d8b5b0ef130dcef39"
+  },
+  "condition": "excellent",
+  "updatedAt": {
+    "$date": "2023-05-09T18:53:20.287Z"
+  },
+  "status": "Available",
+  "watchedBy": []
+},{
+  "_id": {
+    "$oid": "642b14eb03a2698c186d4e15"
+  },
+  "name": "The Goblet of Fire",
+  "category": "Harry Potter",
+  "description": "The Goblet of Fire was the &quot;impartial judge&quot; for the Triwizard Tournament, which chose which students would represent their respective schools during the upcoming tasks of the tournament.[1]\r\n\r\nAfter the students finished placing their name in the goblet, it would then choose one student from each school by spitting out their name in a rush of red flames. Once chosen, the participants were subject to a binding magical contract in which they could not back out of the tournament.",
+  "imageurl": "https://i.pinimg.com/550x/52/9a/90/529a907a36167ef68da7727737843e45.jpg",
+  "tradedBy": {
+    "$oid": "6448970d8b5b0ef130dcef39"
+  },
+  "condition": "moderate",
+  "updatedAt": {
+    "$date": "2023-05-09T18:52:29.201Z"
+  },
+  "status": "Available"
+}]

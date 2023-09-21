@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs')%>
+            <main>
+                <%if(items.length) {%>
+                    <h2>Merch Categories</h2>
+                    <p id="desc">Each category is a different fantasy world from which you can choose to trade an item:</p>
+                    <%categories.forEach(category =>{%>
+                        <div class="collapsible"><%= category%></div>
+                        <%let itemsList = items.filter(item => item.category === category);%>
+                        <div class="itemsList">
+                            <ul>
+                                <%itemsList.forEach(item =>{%>
+                                    <li class="menu"><a class = "fancat" href="/trades/<%= item.id%>"><%= item.name%></a></li>
+                                <%});%>
+                            </ul>
+                        </div>
+                    <%});%>
+                    <!-- <script src="../public/javascript/collapsible.js"></script> -->
+                <%} else{%>
+                    <p>There are no stories to display.</p>
+                <%}%>
+            </main>
+            <%- include('../partials/footer.ejs')%>
